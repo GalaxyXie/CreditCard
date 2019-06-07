@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>信用卡申请表</title>
+	<style type="text/css">
+	.head_area{
+    overflow: hidden;
+    clear: both;
+    margin: 0 1.5em;
+    border-bottom: 3px solid #a71e32;
+	}
+	
+	.word1{
+		font-family: Cursive ;
+		margin: 5px;
+		margin-left: 30px;
+
+	}
+	.word2{
+		font:bold 20px "黑体";		
+		color: #a71e32;
+		margin:5px 0px 5px 30px; 
+	}
+	body{
+		margin: 30px;
+	}
+	.form-horizontal .form-group {
+    margin-right: -15px;
+    margin-left: -15px;
+    margin-bottom: 15px;
+}
+.col-xs-4,.col-xs-5,.col-xs-10{
+	float: left;
+	margin-left:  30px;
+}
+.form{
+	float: left;
+}
+</style>
+</head>
+<body>
+	<div class ="head_area">
+	<h1>思沃银行|信用卡</h1>
+	</div>
+	<div class="word1">尊敬的客户，请您填写如下资料，以便我们为您选择办卡最便捷的通道。</div>
+	<div class="word2">您的个人信息</div>
+	<div class="form">
+	<div class="form-group">
+					<div class="col-md-3 col-sm-3 col-xs-10">
+						<label class="control-label" for="appiFirstName">姓</label>
+						<div><input type="text" class="form-control" id="appiFirstName1" name="appiFirstName1" value="" placeholder="请输入姓" data-length="15" required="required" autocomplete="off"></div>
+					</div>
+					<div class="col-md-3 col-sm-3 col-xs-10">
+						<label class="control-label" for="appiFamilyName">名</label>
+						<div><input type="text" class="form-control" id="appiFamilyName1" name="appiFamilyName1" value="" placeholder="请输入名字" data-length="15" required="required" autocomplete="off"></div>
+					</div>
+					<div class="col-md-6 col-sm-6 col-xs-10">
+						<label class="control-label" for="callname">称谓</label>
+						<div><select name="sex">
+							<option selected="">先生</option>
+							<option>女士</option>
+						</select></div>
+					</div>
+				</div>
+	<div class="form-group">
+			        <div class="col-xs-4">
+						<label class="control-label" for="appiFirstName">姓名拼音</label>
+						<div><input type="text" class="form-control" id="appiFirstName1" name="appiFirstName1" value="" placeholder="请输入姓名拼音" data-length="15" required="required" autocomplete="off"></div>
+					</div>
+					<div class="col-xs-4">
+						<label class="control-label" for="appiFamilyName">出生日期</label>
+						<div><input type="date" class="form-control" id="appiFamilyName1" name="appiFamilyName1" value="" placeholder="请输入日期" data-length="15" required="required" autocomplete="off"></div>
+					</div>
+				</div>
+	<div class="form-group">
+			        <div class="col-xs-4">
+						<label class="control-label" for="IDtype">证件类型</label>
+						<div><select id="IDtype">
+							<option selected="">身份证</option>
+							<option>军官证</option>
+							<option>港澳通行证</option>
+							<option>护照</option>
+						</select></div>
+					</div>
+					 <div class="col-xs-4">
+						<label class="control-label" for="ID">证件号码</label>
+						<div><input type="text" class="form-control" id="ID" name="ID" value="" placeholder="请输入证件号码" data-length="18" required="required" autocomplete="off"></div>
+					</div>
+				</div>
+<div class="form-group">
+			        <div class="col-xs-5">
+						<label class="control-label" for="province">省\直辖市</label>
+						<div><select id="province">
+							<option selected="">北京市</option>
+							<option>湖南省</option>
+							<option>广州省</option>
+							<option>...</option>
+						</select></div>
+					</div>
+					<div class="col-xs-5">
+						<label class="control-label" for="province">区\市</label>
+						<div><select id="province">
+							<option selected="">北京市</option>
+							<option>长沙市</option>
+							<option>衡阳市</option>
+							<option>...</option>
+						</select></div>
+					</div>
+				</div>
+	</div>
+</body>
+</html>
