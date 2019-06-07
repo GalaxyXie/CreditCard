@@ -19,32 +19,47 @@
 	.word2{
 		font:bold 20px "黑体";		
 		color: #a71e32;
-		margin:5px 0px 5px 30px; 
+		margin:30px 30px 5px 30px; 
+		border-bottom: 1px solid #a71e32;
+
 	}
 	body{
 		margin: 30px;
 	}
-	.form-horizontal .form-group {
-    margin-right: -15px;
-    margin-left: -15px;
+	.form-group2 {
+    font: 14px "宋体";
+    margin-left: 30px; 		
+}
+.form-group {
+    margin-top: 15px;
     margin-bottom: 15px;
+    display: flex;
 }
 .col-xs-4,.col-xs-5,.col-xs-10{
-	float: left;
 	margin-left:  30px;
 }
-.form{
-	float: left;
+select{
+	width: 105px;
+}
+.button{
+	background-color: #a71e32;
+	color: white;
+	margin: 15px; 
+}
+.last-line{
+	margin-left: 120px;
 }
 </style>
 </head>
 <body>
+	<!--在这里没有省市二级联动，之后时间有空余将会补充-->
 	<div class ="head_area">
 	<h1>思沃银行|信用卡</h1>
 	</div>
 	<div class="word1">尊敬的客户，请您填写如下资料，以便我们为您选择办卡最便捷的通道。</div>
+	<form id="credit-info">
 	<div class="word2">您的个人信息</div>
-	<div class="form">
+
 	<div class="form-group">
 					<div class="col-md-3 col-sm-3 col-xs-10">
 						<label class="control-label" for="appiFirstName">姓</label>
@@ -56,10 +71,8 @@
 					</div>
 					<div class="col-md-6 col-sm-6 col-xs-10">
 						<label class="control-label" for="callname">称谓</label>
-						<div><select name="sex">
-							<option selected="">先生</option>
-							<option>女士</option>
-						</select></div>
+						<div><input type="radio" name="sex">先生
+							<input type="radio" name="sex">女士</div>
 					</div>
 				</div>
 	<div class="form-group">
@@ -87,7 +100,7 @@
 						<div><input type="text" class="form-control" id="ID" name="ID" value="" placeholder="请输入证件号码" data-length="18" required="required" autocomplete="off"></div>
 					</div>
 				</div>
-<div class="form-group">
+		<div class="form-group">
 			        <div class="col-xs-5">
 						<label class="control-label" for="province">省\直辖市</label>
 						<div><select id="province">
@@ -106,7 +119,137 @@
 							<option>...</option>
 						</select></div>
 					</div>
+					 <div class="col-xs-5">
+						<label class="control-label" for="address">住宅详细地址</label>
+						<div><input type="text" class="form-control" id="address" name="address" value="" placeholder="街道/小区/楼/室等" size="30px" required="required" autocomplete="off"></div>
+					</div>
+		</div>
+		<div class="form-group">
+			        <div class="col-xs-5">
+						<label class="control-label" for="marital_status">婚姻状况</label>
+						<div><select id="marital_status">
+							<option selected="">已婚有子女</option>
+							<option>已婚无子女</option>
+							<option>未婚</option>
+							<option>其他</option>
+						</select></div>
+					</div>
+					<div class="col-xs-5">
+						<label class="control-label" for="education">教育程度</label>
+						<div><select id="education">
+							<option selected="">研究生及以上</option>
+							<option>本科</option>
+							<option>大专</option>
+							<option>中专/高中</option>
+						</select></div>
+					</div>
+		</div>
+		<div class="word2">您的职位信息</div>
+
+	<div class="form-group">
+					<div class="col-md-3 col-sm-3 col-xs-10">
+						<label class="control-label" for="working-unit">单位名称</label>
+						<div><input type="text" class="form-control" id="working-unit" name="working-unit" value="" placeholder="请输入单位名称"  size="80px" required="required" autocomplete="on"></div>
+					</div>
 				</div>
+	<div class="form-group2">
+		单位地址
 	</div>
+	<div class="form-group">
+			        <div class="col-xs-5">
+						<label class="control-label" for="province">省\直辖市</label>
+						<div><select id="province">
+							<option selected="">北京市</option>
+							<option>湖南省</option>
+							<option>广州省</option>
+							<option>...</option>
+						</select></div>
+					</div>
+					<div class="col-xs-5">
+						<label class="control-label" for="province">区\市</label>
+						<div><select id="province">
+							<option selected="">北京市</option>
+							<option>长沙市</option>
+							<option>衡阳市</option>
+							<option>...</option>
+						</select></div>
+					</div>
+					 <div class="col-xs-5">
+						<label class="control-label" for="address">单位详细地址</label>
+						<div><input type="text" class="form-control" id="address" name="address" value="" placeholder="街道/小区/楼/室等" size="30px" required="required" autocomplete="off"></div>
+					</div>
+		</div>
+		<div class="form-group2">
+		单位电话
+	</div>
+	<div class="form-group">
+			        <div class="col-md-3 col-sm-3 col-xs-10">
+						<label class="control-label" >区号</label>
+						<div><input type="text" class="form-control" value="" placeholder="请输入3-4位区号"  size="10px" required="required" autocomplete="off"></div>
+					</div>
+					<div class="col-md-3 col-sm-3 col-xs-10">
+						<label class="control-label">电话号</label>
+						<div><input type="text" class="form-control"  value="" placeholder="请输入7-8位电话号"  size="10" required="required" autocomplete="off"></div>
+					</div>
+					<div class="col-md-3 col-sm-3 col-xs-10">
+						<label class="control-label" >分机号</label>
+						<div><input type="text" class="form-control"  value="" placeholder="请输入3-4位分机号"  size="10px" required="required" autocomplete="off"></div>
+					</div>
+					<div class="col-md-3 col-sm-3 col-xs-10">
+						<label class="control-label" >单位邮编</label>
+						<div><input type="text" class="form-control"  value="" placeholder="请输入6位单位邮编"  size="10px" required="required" autocomplete="off"></div>
+					</div>
+		</div>
+		<div class="form-group">
+			        <div class="col-xs-5">
+						<label class="control-label" for="industry" >单位性质</label>
+						<div><select id="industry">
+							<option selected="" >请选择...</option>
+							<option>...</option>
+							<option>...</option>
+							<option>...</option>
+						</select></div>
+					</div>
+					<div class="col-xs-5">
+						<label class="control-label" for="career">职业信息</label>
+						<div><select id="career">
+							<option selected="">请选择...</option>
+							<option>...</option>
+							<option>...</option>
+							<option>...</option>
+						</select></div>
+					</div>
+					<div class="col-xs-5">
+						<label class="control-label" for="career">经济类型</label>
+						<div><select id="career">
+							<option selected="">请选择...</option>
+							<option>...</option>
+							<option>...</option>
+							<option>...</option>
+						</select></div>
+					</div>
+					<div class="col-xs-5">
+						<label class="control-label" for="career-grade">职位或职级</label>
+						<div><select id="career-grade">
+							<option selected="">请选择...</option>
+							<option>...</option>
+							<option>...</option>
+							<option>...</option>
+						</select></div>
+					</div>
+		</div>
+		<div class="form-group">
+				<div class="col-md-3 col-sm-3 col-xs-10">
+					<label class="control-label" for="working-time">现职已经工作时间（年）</label>
+					<div><input type="text" class="form-control" id="working-time" name="working-time" value="" placeholder="请输入现职已经工作时间（年）"  size="40px" required="required" autocomplete="on"></div>
+				</div>
+				<div class="col-md-3 col-sm-3 col-xs-10">
+					<label class="control-label" for="working-salary">年收入总额（万元）</label>
+					<div><input type="text" class="form-control" id="working-salary" name="working-salary" value="" placeholder="请输入年收入总额（万元）"  size="40px" required="required" autocomplete="on"></div>
+				</div>
+			</div>
+			<div class="last-line">
+			<input type="submit" class="button" value="提交" form="credit-info">  <input type="button" class="button" value="返回"></div>
+	</form>
 </body>
 </html>
